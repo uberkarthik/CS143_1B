@@ -8,17 +8,18 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/POST
+~MSle0~/MovieActor
 
 # Command Line History (newest to oldest):
 :wq
-:Wq
 :q!
+:Wq
 :Q!
 :q! 
 :qQ
 
 # Search String History (newest to oldest):
+?/MovieActor
 ?/POST
 ?/$_POST
 ?/CHECK
@@ -32,42 +33,45 @@
 
 # Registers:
 ""1	LINE	0
-	No Errors
+	ALTER TABLE Director AUTO_INCREMENT=68626;
 "2	LINE	0
-	INSERT INTO Actor(id, first, last, sex, dob, dod) VALUES (68634, "Udayan", "Sahai","Male", 12121997, 12121996); 
+	ALTER TABLE Actor AUTO_INCREMENT=68636;
 "3	LINE	0
-	INSERT INTO MovieActor(mid, genre) VALUES (4731,375,375); 
+	No Errors
 "4	LINE	0
-	INSERT INTO Sales(mid, ticketsSold, totalIncome) VALUES (NULL, 3500, 3500); 
+	INSERT INTO Actor(id, first, last, sex, dob, dod) VALUES (68634, "Udayan", "Sahai","Male", 12121997, 12121996); 
 "5	LINE	0
-	INSERT INTO Actor(id, first, last, sex, dob, dod) VALUES (INSERT INTO Actor(id, first, last, sex, dob, dod) VALUES (68635, "Udayan", "Sahai","Male", 12121997, 12122100);:Q!, "Udayan", "Sahai","Male", 12121997, 12122100);
+	INSERT INTO MovieActor(mid, genre) VALUES (4731,375,375); 
 "6	LINE	0
-	
+	INSERT INTO Sales(mid, ticketsSold, totalIncome) VALUES (NULL, 3500, 3500); 
 "7	LINE	0
-	
+	INSERT INTO Actor(id, first, last, sex, dob, dod) VALUES (INSERT INTO Actor(id, first, last, sex, dob, dod) VALUES (68635, "Udayan", "Sahai","Male", 12121997, 12122100);:Q!, "Udayan", "Sahai","Male", 12121997, 12122100);
 "8	LINE	0
 	
 "9	LINE	0
-	68635 | Ãlvarez             | Marian            | Female | 1978-04-01 | NUL
+	
 
 # File marks:
-'0  1  0  ~/load.sql
-'1  1  0  ~/create.sql
-'2  47  41  ~/create.sql
-'3  38  44  ~/create.sql
-'4  88  1  ~/create.sql
-'5  1  0  ~/data/director.del
-'6  1  0  /media/sf_vm-shared/connect.php
-'7  1  0  /media/sf_vm-shared/query.php
-'8  1  0  /media/sf_vm-shared/connect.php 
-'9  1  0  /media/sf_vm-shared/help.php
+'0  66  40  ~/create.sql
+'1  1  34  ~/script.sh
+'2  4  23  ~/script.sh
+'3  46  0  ~/create.sql
+'4  1  0  ~/load.sql
+'5  1  0  ~/create.sql
+'6  37  44  ~/create.sql
+'7  86  1  ~/create.sql
+'8  1  0  ~/data/director.del
+'9  1  0  /media/sf_vm-shared/connect.php
 
 # Jumplist (newest first):
--'  1  0  ~/load.sql
+-'  66  40  ~/create.sql
 -'  1  0  ~/create.sql
--'  47  41  ~/create.sql
--'  38  44  ~/create.sql
--'  88  1  ~/create.sql
+-'  1  34  ~/script.sh
+-'  4  23  ~/script.sh
+-'  46  0  ~/create.sql
+-'  1  0  ~/load.sql
+-'  37  44  ~/create.sql
+-'  86  1  ~/create.sql
 -'  1  0  ~/data/director.del
 -'  1  0  /media/sf_vm-shared/connect.php
 -'  1  0  /media/sf_vm-shared/query.php
@@ -92,20 +96,20 @@
 -'  93  0  /media/sf_vm-shared/query.php
 -'  19  7  /media/sf_vm-shared/query.php
 -'  74  76  ~/violate.sql
--'  34  5  ~/create.sql
+-'  33  5  ~/create.sql
 -'  21  3  ~/create.sql
--'  45  3  ~/create.sql
--'  33  3  ~/create.sql
+-'  44  3  ~/create.sql
+-'  32  3  ~/create.sql
 -'  64  0  ~/violate.sql
 -'  79  62  ~/violate.sql
 -'  54  107  ~/violate.sql
--'  94  0  ~/create.sql
--'  90  0  ~/create.sql
+-'  92  0  ~/create.sql
+-'  88  0  ~/create.sql
 -'  42  60  ~/violate.sql
 -'  80  55  ~/violate.sql
 -'  29  53  ~/violate.sql
 -'  22  54  ~/violate.sql
--'  76  0  ~/create.sql
+-'  74  0  ~/create.sql
 -'  21  60  ~/violate.sql
 -'  13  122  ~/violate.sql
 -'  1  0  ~/data/violate.sql
@@ -116,7 +120,7 @@
 -'  1  0  ~/data/actor1.del
 -'  1  0  ~/actor1.del
 -'  3  0  ~/load.sql
--'  103  3  ~/create.sql
+-'  101  3  ~/create.sql
 -'  30  2  ~/query.php
 -'  31  6  ~/main.html
 -'  1  0  ~/main.html
@@ -157,33 +161,42 @@
 -'  1  0  /media/sf_vm-shared/main.html
 -'  31  6  /media/sf_vm-shared/main.html
 -'  1  0  /media/sf_vm-shared/main.html
--'  31  6  /media/sf_vm-shared/main.html
--'  1  0  /media/sf_vm-shared/main.html
--'  31  6  ~/main.html
 
 # History of marks within files (newest to oldest):
 
-> ~/load.sql
-	"	1	0
-
 > ~/create.sql
-	"	1	0
-	^	47	42
-	.	47	41
+	"	66	40
+	^	37	24
+	.	46	0
 	+	15	16
 	+	16	17
-	+	40	16
-	+	41	17
-	+	42	0
+	+	39	16
+	+	40	17
+	+	41	0
 	+	14	40
-	+	38	40
+	+	37	40
 	+	14	43
-	+	38	40
+	+	37	40
 	+	14	39
-	+	25	0
+	+	24	0
 	+	24	37
-	+	38	39
-	+	47	41
+	+	37	39
+	+	46	41
+	+	14	24
+	+	24	0
+	+	37	24
+	+	46	0
+
+> ~/script.sh
+	"	1	34
+	^	1	35
+	.	1	35
+	+	1	36
+	+	4	23
+	+	1	35
+
+> ~/load.sql
+	"	1	0
 
 > ~/data/director.del
 	"	1	0

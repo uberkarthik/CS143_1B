@@ -11,7 +11,7 @@ CREATE TABLE Movie (
 /*Primary key constraint #2: Every actor should have one unique id
 Check constraint #1: Check that actor's DOB is before DOD, if not marked as dead*/ 
 CREATE TABLE Actor (
-         id int NOT NULL AUTO_INCREMENT,
+         id int NOT NULL,
 		 last varchar(20) NOT NULL,
 		 first varchar(20) NOT NULL,
 		 sex varchar(6) NOT NULL,
@@ -21,7 +21,6 @@ CREATE TABLE Actor (
 		 CHECK(dod IS NULL OR dob < dod)
      );
 
-ALTER TABLE Actor AUTO_INCREMENT=68636;
 /*Referential integrity constraint #1: The sales mid references the corresponding movie id
 Check constraint #2: Check that number of tickets sold are not negative*/
 CREATE TABLE Sales (
@@ -35,7 +34,7 @@ CREATE TABLE Sales (
 /*Primary key constraint #3: Every director should have one unique id
 Check constraint #3: Check that actor's DOB is before DOD, if not marked as dead*/ 
 CREATE TABLE Director (
-         id int NOT NULL AUTO_INCREMENT,
+         id int NOT NULL,
 		 last varchar(20) NOT NULL,
 		 first varchar(20) NOT NULL,
 		 dob date NOT NULL,
@@ -44,7 +43,6 @@ CREATE TABLE Director (
 		 CHECK(dod IS NULL OR dob < dod)
      );
 	 
-ALTER TABLE Director AUTO_INCREMENT=68626;
 
 /*Referential integrity constraint #2: The MovieGenre mid references the corresponding movie id*/
 CREATE TABLE MovieGenre (
