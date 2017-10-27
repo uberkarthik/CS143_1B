@@ -77,7 +77,7 @@ CREATE TABLE MovieRating (
 /*Referential integrity constraint #6: The Review mid references the corresponding movie id*/
 CREATE TABLE Review (
          name varchar(20) NOT NULL,
-		 time timestamp NOT NULL,
+		 time timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 		 mid int NOT NULL,
 		 rating int NOT NULL,
 		 comment varchar(500),
