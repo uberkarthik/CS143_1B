@@ -8,17 +8,19 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/Rating
+~MSle0~/increment
 
 # Command Line History (newest to oldest):
-:wq
 :q!
+:wq
 :Wq
 :Q!
 :q! 
 :qQ
 
 # Search String History (newest to oldest):
+?/increment
+?/AUTO
 ?/Rating
 ?/MovieActor
 ?/POST
@@ -53,18 +55,19 @@
 	
 
 # File marks:
-'0  80  51  ~/create.sql
-'1  66  40  ~/create.sql
-'2  1  34  ~/script.sh
-'3  4  23  ~/script.sh
-'4  46  0  ~/create.sql
-'5  1  0  ~/load.sql
-'6  1  0  ~/create.sql
-'7  37  44  ~/create.sql
-'8  86  1  ~/create.sql
-'9  1  0  ~/data/director.del
+'0  1  0  /media/sf_vm-shared/create.sql
+'1  80  51  ~/create.sql
+'2  66  40  ~/create.sql
+'3  1  34  ~/script.sh
+'4  4  23  ~/script.sh
+'5  46  0  ~/create.sql
+'6  1  0  ~/load.sql
+'7  1  0  ~/create.sql
+'8  37  44  ~/create.sql
+'9  86  1  ~/create.sql
 
 # Jumplist (newest first):
+-'  1  0  /media/sf_vm-shared/create.sql
 -'  80  51  ~/create.sql
 -'  64  0  ~/create.sql
 -'  1  0  ~/create.sql
@@ -162,9 +165,11 @@
 -'  1  0  /media/sf_vm-shared/main.html
 -'  31  6  /media/sf_vm-shared/main.html
 -'  1  0  /media/sf_vm-shared/main.html
--'  31  6  /media/sf_vm-shared/main.html
 
 # History of marks within files (newest to oldest):
+
+> /media/sf_vm-shared/create.sql
+	"	1	0
 
 > ~/create.sql
 	"	80	51

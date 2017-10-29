@@ -1,0 +1,5 @@
+<?php 
+
+$var = "Hello Sir";
+
+?> 
