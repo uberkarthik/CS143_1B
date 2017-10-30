@@ -20,6 +20,11 @@ print "
 		background-color: powderblue;
 	}
 
+	legend
+	{
+		font-weight: bold;
+	}
+
 	</style> 
 </head> 
 	<body>

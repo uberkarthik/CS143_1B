@@ -14,6 +14,11 @@ print
 		background-color: powderblue;
 	}
 
+	legend
+	{
+		font-weight: bold;
+	}
+
 	</style> 
 </head>
 <body>
@@ -22,9 +27,7 @@ print
 		<fieldset>
 
 			<legend> Movie Information </legend> 
-
-		
-
+			
 	</form>
 
 </body>
@@ -87,7 +90,7 @@ while ($row = mysql_fetch_row($rs))
 		print "$row[0] ";
 	print "rated this Movie a $row[1] <br/>";
 	print "Review: $row[2]<hr>";
-	print "</fieldset> ";
 }
+print "	</fieldset> ";
 mysql_close($db_connection);
 ?>

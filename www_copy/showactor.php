@@ -14,6 +14,11 @@ print
 		background-color: powderblue;
 	}
 
+	legend
+	{
+		font-weight: bold;
+	}
+
 	</style> 
 </head>
 <body>
@@ -23,15 +28,13 @@ print
 
 			<legend> Actor Information </legend> 
 
-		
-
 	</form>
 
 </body>
 </html>
 ";
-//$act = $_GET["id"];
-$act = 25722;	//temporary id to test if the code works		
+$act = $_GET["id"];
+//$act = 25722;	//temporary id to test if the code works		
 if ($act != "")
 {
 	$db_connection = mysql_connect("localhost", "cs143", "");
@@ -54,9 +57,11 @@ if ($act != "")
 	$updater = "SELECT role, mid, title, year FROM Movie, MovieActor WHERE aid = $act AND mid = id ORDER BY year;";
 	$rs = mysql_query($updater, $db_connection);
 	while ($row = mysql_fetch_row($rs))
-		echo "$row[0] in <a href=\"browsemovie.php?id=$row[1]\">",$row[2]," -- ",$row[3],"</a><br/>";
-
-	print "</fieldset> ";				
+		echo "$row[0] in <a href=\"browsemovie.php?id=$row[1]\">",$row[2]," -- ",$row[3],"</a><br/>";				
+	
+	print "</fieldset> ";
+	
 	mysql_close($db_connection);
 }
+
 ?>
