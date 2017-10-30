@@ -23,7 +23,7 @@ print
 
 			<legend> Movie Information </legend> 
 
-		</fieldset> 
+		
 
 	</form>
 
@@ -87,6 +87,7 @@ while ($row = mysql_fetch_row($rs))
 		print "$row[0] ";
 	print "rated this Movie a $row[1] <br/>";
 	print "Review: $row[2]<hr>";
+	print "</fieldset> ";
 }
 mysql_close($db_connection);
 ?>

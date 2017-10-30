@@ -11,6 +11,18 @@ print "
 
 <style>
 //table, th, td {border: 1px solid black;}
+.first
+{
+	float: left; 
+	width: 45%;
+}
+
+.second
+{
+	float: right; 
+	width: 45%;
+}
+
 </style>
 
 </head> 
@@ -34,10 +46,12 @@ $key = $_GET['search'];
 $words = explode(" ", $key);
 
 
+
+
+print "<div class = 'first'>";
 print "<b> The results from Actors are - </b><br>";
 
-
-print '<table style="width:70%">';
+print '<table>';
 
 
 foreach ($words as $word) {
@@ -68,12 +82,13 @@ foreach ($words as $word) {
 
 } 
 print "</table>";
+print "</div>";
 
 
-print "<br><br><b> The results from Movies are - </b> <br>";
 
-
- print '<table style="width:70%">';
+ print "<div class = 'second'>";
+ print "<b> The results from Movies are - </b> <br>";
+ print '<table>';
 
 
 foreach ($words as $word) {
@@ -104,6 +119,7 @@ while($row = $rs->fetch_assoc())
 
 }
  print "</table>";
+ print "</div>";
 
  }
 

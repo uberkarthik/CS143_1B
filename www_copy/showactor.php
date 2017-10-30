@@ -23,7 +23,7 @@ print
 
 			<legend> Actor Information </legend> 
 
-		</fieldset> 
+		
 
 	</form>
 
@@ -54,7 +54,9 @@ if ($act != "")
 	$updater = "SELECT role, mid, title, year FROM Movie, MovieActor WHERE aid = $act AND mid = id ORDER BY year;";
 	$rs = mysql_query($updater, $db_connection);
 	while ($row = mysql_fetch_row($rs))
-		echo "$row[0] in <a href=\"browsemovie.php?id=$row[1]\">",$row[2]," -- ",$row[3],"</a><br/>";				
+		echo "$row[0] in <a href=\"browsemovie.php?id=$row[1]\">",$row[2]," -- ",$row[3],"</a><br/>";
+
+	print "</fieldset> ";				
 	mysql_close($db_connection);
 }
 ?>
