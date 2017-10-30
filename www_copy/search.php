@@ -31,10 +31,8 @@ if ( isset($_GET['Submit']))
 {
 
 $key = $_GET['search']; 
+$words = explode(" ", $key);
 
-
- $query =  "SELECT first, last FROM Actor where first REGEXP '$key' or last REGEXP '$key';";
- $rs = $db_connection->query($query);
 
 print "<b> The results from Actors are - </b><br>";
 
@@ -42,37 +40,47 @@ print "<b> The results from Actors are - </b><br>";
 print '<table style="width:70%">';
 
 
-while($row = $rs->fetch_assoc())
-{
-	print("<tr>");
-	
-		print("<td>");
+foreach ($words as $word) {
+
+	 $query =  "SELECT first, last FROM Actor where first REGEXP '$word' or last REGEXP '$word';";
+	 $rs = $db_connection->query($query);
+
+
+
+	while($row = $rs->fetch_assoc())
+	{
+		print("<tr>");
 		
-		$name = $row['first']." ".$row['last'];
-		print "$name";
+			print("<td>");
+			
+			$name = $row['first']." ".$row['last'];
+			print "$name";
 
-		print("</td>");
+			print("</td>");
 
-	print("</tr>");
-		//echo htmlentities($row['_message']);
-		//print "$value	";
+		print("</tr>");
+			//echo htmlentities($row['_message']);
+			//print "$value	";
 
-	//} 
-	//print "<br><br>";
-}
+		//} 
+		//print "<br><br>";
+	}
 
+} 
 print "</table>";
 
-}
-
-
- $query =  "SELECT title FROM Movie where title REGEXP '$key';";
- $rs = $db_connection->query($query);
 
 print "<br><br><b> The results from Movies are - </b> <br>";
 
 
  print '<table style="width:70%">';
+
+
+foreach ($words as $word) {
+
+ $query =  "SELECT title FROM Movie where title REGEXP '$word';";
+ $rs = $db_connection->query($query);
+
 
 
 while($row = $rs->fetch_assoc())
@@ -94,9 +102,10 @@ while($row = $rs->fetch_assoc())
 	// //print "<br><br>";
 }
 
+}
  print "</table>";
 
-// }
+ }
 
 
 
